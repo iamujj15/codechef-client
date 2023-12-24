@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/codechef-sde-internship-assignment/static/css/main.1eb6e465.css",
+    "main.js": "/codechef-sde-internship-assignment/static/js/main.7f12e401.js",
+    "index.html": "/codechef-sde-internship-assignment/index.html",
+    "main.1eb6e465.css.map": "/codechef-sde-internship-assignment/static/css/main.1eb6e465.css.map",
+    "main.7f12e401.js.map": "/codechef-sde-internship-assignment/static/js/main.7f12e401.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1eb6e465.css",
+    "static/js/main.7f12e401.js"
+  ]
+}

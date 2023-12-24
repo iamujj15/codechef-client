@@ -1,0 +1,294 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.error-page {
+	text-align: center;
+	background: #fff;
+	border-top: 1px solid #eee;
+}
+.error-page .error-inner {
+	display: inline-block;
+}
+.error-page .error-inner h1 {
+	font-size: 140px;
+	text-shadow: 3px 5px 2px #3333;
+	color: #006dfe;
+	font-weight: 700;
+}
+.error-page .error-inner h1 span {
+	display: block;
+	font-size: 25px;
+	color: #333;
+	font-weight: 600;
+	text-shadow: none;
+}
+.error-page .error-inner p {
+	padding: 20px 15px;
+}
+.error-page .search-form {
+	width: 100%;
+	position: relative;
+}
+.error-page .search-form input {
+	width: 400px;
+	height: 50px;
+	padding: 0px 78px 0 30px;
+	border: none;
+	background: #f6f6f6;
+	border-radius: 5px;
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: 400;
+	font-size: 14px;
+}
+.error-page .search-form input:hover {
+	padding-left: 35px;
+}
+.error-page .search-form .btn {
+	width: 80px;
+	height: 50px;
+	border-radius: 5px;
+	cursor: pointer;
+	background: #006dfe;
+	display: inline-block;
+	position: relative;
+	top: -2px;
+}
+.error-page .search-form .btn i {
+	font-size: 16px;
+}
+.error-page .search-form .btn:hover {
+	background: #333;
+}
+
+.container {
+	max-width: 80rem;
+	margin: 1rem auto;
+}
+
+.error-msg {
+	color: hsl(0, 100%, 67%);
+}
+
+.comments-title {
+	margin-bottom: 0.5rem;
+}
+
+.comment-form-row {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.message-input {
+	flex-grow: 1;
+	resize: none;
+	height: 70px;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	font-size: inherit;
+	font-family: inherit;
+	border: 2px solid hsl(235, 50%, 74%);
+	line-height: 1.4;
+}
+
+.message-input:focus {
+	border-color: hsl(235, 100%, 67%);
+	outline: none;
+}
+
+.btnC {
+	--hue: 235;
+	--color: hsl(var(--hue), 100%, 67%);
+	padding: 0.5em 1em;
+	background: var(--color);
+	border: none;
+	color: white;
+	border-radius: 0.5em;
+	font-size: 0.75em;
+	cursor: pointer;
+}
+
+.btnC:hover,
+.btnC:focus-visible {
+	--color: hsl(var(--hue), 100%, 74%);
+}
+
+.mt-4 {
+	margin-top: 1rem;
+}
+
+.mb-4 {
+	margin-bottom: 1rem;
+}
+
+.mt-1 {
+	margin-top: 0.25rem;
+}
+
+.comment-stack {
+	margin: 0.5rem 0;
+}
+
+.comment-stack:last-child {
+	margin-bottom: 0;
+}
+
+.nested-comments {
+	margin-left: 20px;
+	padding-left: 0.5rem;
+	flex-grow: 1;
+}
+
+.nested-comments-stack {
+	margin-left: 20px;
+	padding-left: 0.5rem;
+	display: flex;
+}
+
+.collapse-line {
+	border: none;
+	background: none;
+	padding: 0;
+	width: 15px;
+	margin-top: 0.5rem;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	transform: translateX(-50%);
+}
+
+.collapse-line:hover::before,
+.collapse-line:focus-visible::before {
+	background-color: hsl(235, 100%, 60%);
+}
+
+.collapse-line::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+	background-color: hsl(235, 50%, 74%);
+	transition: background-color 100ms ease-in-out;
+}
+
+.hide {
+	display: none;
+}
+
+.btnC.icon-btn {
+	background: none;
+	color: var(--color);
+	padding: 0.25em;
+	display: flex;
+	align-items: center;
+}
+
+.icon-btn {
+	color: #6765aa;
+}
+
+.btnRp {
+	margin-left: 20px;
+	padding-left: 0.5rem !important;
+	height: fit-content !important;
+	width: fit-content !important;
+}
+
+.btn {
+	padding: 0px;
+	height: 30px;
+	width: 40px;
+}
+
+.mr-1 {
+	margin-right: 0.25em;
+}
+
+.icon-btn:hover,
+.icon-btn:focus-visible {
+	--color: hsl(var(--hue), 100%, 74%);
+}
+
+.icon-btn-active,
+.icon-btn.danger {
+	--hue: 0;
+}
+
+.icon-btn-active {
+	position: relative;
+}
+
+.icon-btn-active::before {
+	content: "\00D7";
+	position: absolute;
+	font-size: 0.75em;
+	width: 1em;
+	height: 1em;
+	color: white;
+	background-color: var(--color);
+	border-radius: 50%;
+	bottom: 0.1em;
+	right: 0.1em;
+}
+
+.comment {
+	padding: 0.5rem;
+	border: 1px solid #c0c0c0;
+	border-radius: 0.5rem;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	margin: 15px 25px;
+}
+
+.comment .header {
+	color: hsl(235, 50%, 67%);
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.25rem;
+	font-size: 0.75em;
+}
+
+.comment .header {
+	font-weight: bold;
+}
+
+.name {
+	font-weight: bold;
+	font-size: 16px;
+	margin-left: 8px;
+}
+
+.date {
+	font-weight: bold;
+	font-size: 14px;
+	margin-left: 8px;
+}
+
+.comment .message {
+	white-space: pre-wrap;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.message {
+	font-size: 18px;
+}
+
+.comment .footer {
+	display: flex;
+	margin-top: 0.5rem;
+}
+
+.ml-3 {
+	margin-left: 1.5rem;
+}
+
+.btnC[disabled] {
+	--color: hsl(var(--hue), 20%, 74%);
+}
