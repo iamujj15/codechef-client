@@ -10,7 +10,7 @@ const BlogsPage = () => {
     const handleBasicBlogs = async () => {
         // Fetch Basic Details of Blogs from Server
         try {
-            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blogs/basic/10`, {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blogs/basic/10`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

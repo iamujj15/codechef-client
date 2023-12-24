@@ -10,7 +10,7 @@ const RecommendationItemList = () => {
     const handleBlogs = async () => {
         // Fetch Details of Blogs from Server
         try {
-            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blogs/10`, {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blogs/10`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

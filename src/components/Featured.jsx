@@ -9,15 +9,19 @@ function Featured() {
     const handleFeaturedBlogs = async () => {
         // Fetch Basic Details of Blogs from Server
         try {
-            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blogs/basic/5`, {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blogs/basic/5`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            const responseData = await response.json();
-            if (response.status >= 200 && response.status < 300) {
-                setFeatured(responseData);
+            try {
+                const responseData = await response.json();
+                if (response.status >= 200 && response.status < 300) {
+                    setFeatured(responseData);
+                }
+            } catch (err) {
+                console.log("Blogs not found!");
             }
         } catch (err) {
             console.log(err);

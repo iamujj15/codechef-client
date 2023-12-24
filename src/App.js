@@ -14,7 +14,7 @@ import Error404 from './components/Error404';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename=''>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />

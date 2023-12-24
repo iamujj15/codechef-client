@@ -8,11 +8,11 @@ const NavBar = () => {
         <>
             <Navbar bg="dark" data-bs-theme="dark" expand="lg" sticky="top" direction="horizontal" gap={6}>
                 <Container>
-                    <Navbar.Brand href="/codechef-sde-internship-assignment/">CCBlogs</Navbar.Brand>
+                    <Navbar.Brand href="/">CCBlogs</Navbar.Brand>
                     <Nav className="me-auto ms-auto">
-                        <Nav.Link href="/codechef-sde-internship-assignment/">Home</Nav.Link>
-                        <Nav.Link href="/codechef-sde-internship-assignment/about">About</Nav.Link>
-                        <Nav.Link href="/codechef-sde-internship-assignment/blogs">Blogs</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/about">About</Nav.Link>
+                        <Nav.Link href="/blogs">Blogs</Nav.Link>
                     </Nav>
                     <Nav>
                         <span>

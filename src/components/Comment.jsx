@@ -66,7 +66,7 @@ export const Comment = ({
         if (isAuth) {
             const upvoteComment = async () => {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}/comment/${id}/upvote`, {
+                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}/comment/${id}/upvote`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ export const Comment = ({
         if (isAuth) {
             const downvoteComment = async () => {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}/comment/${id}/downvote`, {
+                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}/comment/${id}/downvote`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -134,7 +134,7 @@ export const Comment = ({
             // Create a Comment
             const createComment = async () => {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}/comment`, {
+                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}/comment`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -181,7 +181,7 @@ export const Comment = ({
 
             const updateComment = async () => {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}/comment/${id}`, {
+                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}/comment/${id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'
@@ -214,7 +214,7 @@ export const Comment = ({
 
             const deleteComment = async () => {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}/comment/${id}`, {
+                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}/comment/${id}`, {
                         method: 'DELETE',
                         headers: {
                             'Content-Type': 'application/json'
@@ -242,7 +242,7 @@ export const Comment = ({
         if (isAuth) {
             const reportComment = async () => {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}/comment/${id}/report`, {
+                    const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}/comment/${id}/report`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

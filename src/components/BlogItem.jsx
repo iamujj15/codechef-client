@@ -21,7 +21,7 @@ const BlogItem = () => {
     const handleBlog = async () => {
         // Fetch Details of a Blog from Server
         try {
-            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}`, {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ const BlogItem = () => {
             return;
         }
         try {
-            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}blog/${blogId}/comment`, {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/blog/${blogId}/comment`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
