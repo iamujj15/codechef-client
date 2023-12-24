@@ -11,8 +11,8 @@ const NavBar = () => {
                     <Navbar.Brand href="/codechef-client/">CCBlogs</Navbar.Brand>
                     <Nav className="me-auto ms-auto">
                         <Nav.Link href="/codechef-client/">Home</Nav.Link>
-                        <Nav.Link href="/codechef-client/about">About</Nav.Link>
-                        <Nav.Link href="/codechef-client/blogs">Blogs</Nav.Link>
+                        <Nav.Link href="/codechef-client/#/about">About</Nav.Link>
+                        <Nav.Link href="/codechef-client/#/blogs">Blogs</Nav.Link>
                     </Nav>
                     <Nav>
                         <span>
