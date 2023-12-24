@@ -130,10 +130,10 @@ const BlogItem = () => {
             </InputGroup>
             <br />
             {
-                rootComments != null && rootComments.length > 0 ? (
+                ((rootComments != null && rootComments.length > 0) || comments?.length > 0) ? (
                     <div style={{ border: "1px solid #e6e6e6", borderRadius: "15px", boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px" }}>
                         <div className="mt-4 mb-4">
-                            <CommentList comments={rootComments} allComments={comments} nesting_level={0} blogHandler={handleBlog} />
+                            <CommentList comments={rootComments} allComments={comments} nesting_level={0} handleBlog={handleBlog} />
                         </div>
                     </div>
                 ) : (

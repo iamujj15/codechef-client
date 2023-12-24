@@ -8,7 +8,7 @@ export const CommentForm = ({
     onSubmit,
     initValue = "",
     autoFocus = false,
-    blogHandler
+    handleBlog
 }) => {
     const [message, setMessage] = useState(initValue);
 
@@ -16,8 +16,8 @@ export const CommentForm = ({
         e.preventDefault();
         await onSubmit(message);
 
-        if (blogHandler !== undefined) {
-            await blogHandler();
+        if (handleBlog !== undefined) {
+            await handleBlog();
         }
 
         setMessage(initValue);

@@ -26,7 +26,7 @@ export const Comment = ({
     nesting_level,
     is_deleted,
     deleted_message,
-    blogHandler
+    handleBlog
 }) => {
     const [isReplying, setIsReplying] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
@@ -166,11 +166,22 @@ export const Comment = ({
             }
 
             await createComment();
+            if (handleBlog !== undefined) {
+                await handleBlog();
+            }
         } else {
             setAlertForm("Please login to post a comment");
             return;
         }
     }
+
+    useEffect(() => {
+        if (alertForm.length > 0) {
+            setTimeout(() => {
+                setAlertForm("");
+            }, 3000);
+        }
+    }, [alertForm]);
 
     const onCommentUpdate = async (boxMessage) => {
         if (isAuth) {
@@ -361,7 +372,7 @@ export const Comment = ({
                         onSubmit={onCommentReply}
                         alertForm={alertForm}
                         loading={loading}
-                        blogHandler={blogHandler}
+                        handleBlog={handleBlog}
                     />
                 </div>
             )}
