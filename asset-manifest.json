@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/codechef-client/static/css/main.1eb6e465.css",
-    "main.js": "/codechef-client/static/js/main.d70854e1.js",
+    "main.js": "/codechef-client/static/js/main.ef6f5713.js",
     "index.html": "/codechef-client/index.html",
     "main.1eb6e465.css.map": "/codechef-client/static/css/main.1eb6e465.css.map",
-    "main.d70854e1.js.map": "/codechef-client/static/js/main.d70854e1.js.map"
+    "main.ef6f5713.js.map": "/codechef-client/static/js/main.ef6f5713.js.map"
   },
   "entrypoints": [
     "static/css/main.1eb6e465.css",
-    "static/js/main.d70854e1.js"
+    "static/js/main.ef6f5713.js"
   ]
 }
