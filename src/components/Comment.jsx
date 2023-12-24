@@ -9,6 +9,7 @@ import { CommentList } from "./CommentList";
 import fetchAuth from "../auth";
 import { useParams } from "react-router-dom";
 import { DeletedComment } from "./DeletedComment";
+import { HiddenComment } from "./HiddenComment";
 
 const dateFormatter = new Intl.DateTimeFormat("en-IN", {
     dateStyle: "medium",
@@ -26,6 +27,8 @@ export const Comment = ({
     nesting_level,
     is_deleted,
     deleted_message,
+    is_Hidden,
+    hidden_message,
     handleBlog
 }) => {
     const [isReplying, setIsReplying] = useState(false);
@@ -287,6 +290,17 @@ export const Comment = ({
         return (
             <DeletedComment
                 deleted_message={deleted_message}
+                allComments={allComments}
+                nesting_level={nesting_level}
+                id={id}
+            />
+        )
+    }
+
+    if (is_Hidden > 0) {
+        return (
+            <HiddenComment
+                hidden_message={hidden_message}
                 allComments={allComments}
                 nesting_level={nesting_level}
                 id={id}
