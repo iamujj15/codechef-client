@@ -9,8 +9,6 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Error404 from './components/Error404';
 
-// let blog_id = null;
-
 function App() {
   return (
     <div className="App">
